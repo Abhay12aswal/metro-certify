@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F4F6F9;
+  --foreground: #1E293B;
+  --gov-navy: #002147;
+  --gov-blue: #0B3C5D;
+  --gov-deep-blue: #0A3A60;
+  --gov-gold: #D4AF37;
+  --gov-saffron: #FF9933;
+  --gov-green: #15803D;
+  --gov-red: #B91C1C;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Accessibility font sizing classes */
+.font-scale-sm {
+  font-size: 92% !important;
+}
+
+.font-scale-md {
+  font-size: 100% !important;
+}
+
+.font-scale-lg {
+  font-size: 108% !important;
+}
+
+/* High Contrast Mode Overrides */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #FFFF00 !important;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  background-color: #000000 !important;
+  color: #FFFF00 !important;
+  border-color: #FFFF00 !important;
+}
+
+.high-contrast table th,
+.high-contrast table td {
+  border-color: #FFFF00 !important;
+}
+
+/* Custom Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E8F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748B;
+}
+
+/* =========================================================
+   OFFICIAL OIML R 76-2 PRINT-PERFECT STYLESHEET
+   ========================================================= */
+@page {
+  size: A4 portrait;
+  margin: 10mm 12mm 12mm 12mm;
+}
+
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Hide interactive web UI */
+  .no-print,
+  nav,
+  button,
+  aside,
+  header {
+    display: none !important;
+  }
+
+  /* Print container */
+  .print-container {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Page break rules */
+  .page-break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .page-break-before-always {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Print table optimization */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    font-size: 9pt !important;
+  }
+
+  th, td {
+    border: 1px solid #1e293b !important;
+    padding: 3px 5px !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-exact-color {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
