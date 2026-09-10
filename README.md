@@ -1,5 +1,5 @@
 # National Legal Metrology Digital Evaluation Portal (OIML R-76)
-### *Digital Model Approval & Pattern Evaluation System for Non-Automatic Weighing Instruments (NAWI)*
+### *Digital Model Approval & Pattern Evaluation System for Non-Automatic Weighing Instruments (NAWI)
 
 **Department of Consumer Affairs**  
 *Ministry of Consumer Affairs, Food & Public Distribution, Government of India*  
