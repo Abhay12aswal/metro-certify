@@ -57,12 +57,13 @@ export default function NavigationHeader({
               Testing Labs
             </a>
             <a
-              href="https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf"
+              href="/docs/project-overview.html"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1 hover:text-[#002147] transition text-slate-600"
+              className="flex items-center gap-1 hover:text-[#002147] transition text-slate-600 font-bold"
+              title="View and print the complete project summary and evaluation document"
             >
-              <span>Documents</span>
+              <span>Project Brief (PDF)</span>
               <ExternalLink className="w-3 h-3 text-slate-400" />
             </a>
           </nav>
